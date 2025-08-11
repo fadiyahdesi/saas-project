@@ -13,11 +13,11 @@ class DashboardController extends Controller
 
         // Cek peran (role) dari user yang sedang login
         if ($user->role === 'admin') {
-            // Jika admin, tampilkan view dashboard admin
+            // Pastikan panggilannya seperti ini, tanpa .blade.php
             return view('dashboards.admin');
         } elseif ($user->role === 'staff') {
             // Jika staff, tampilkan view dashboard staff
-            return view('dashboards.staff');
+            return view('staff.blade');
         }
 
         // Default fallback jika tidak punya role

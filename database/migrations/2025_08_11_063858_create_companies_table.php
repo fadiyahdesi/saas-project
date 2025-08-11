@@ -9,14 +9,14 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
     public function up(): void
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('sector_id')->constrained('sectors'); // Foreign Key ke tabel sectors
+            $table->foreignId('sector_id')->constrained('sectors');
             $table->string('address')->nullable();
-            $table->string('phone')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
         });

@@ -1,7 +1,7 @@
 @extends('adminlte::auth.register')
 
 @section('auth_body')
-    <form action="{{ route('company.register') }}" method="post">
+    <form action="{{ route('company.register.submit') }}" method="post">
         @csrf
 
         {{-- Company Name field --}}
